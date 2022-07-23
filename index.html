@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+   
+
+
+
+    <head>
+        <title>The Art Gallery</title>
+        <link rel="stylesheet"  href="style.css"> 
+        <script src="https://www.gstatic.com/firebasejs/9.9.1/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.9.1/firebase-database-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.9.1/firebase-auth-compat.js"></script>
+        <!-- <script src="https://www.gstatic.com/firebasejs/9.9.1/firebase-auth-compat.js"></script> -->
+
+        <!-- <script type="module">import { getAuth, signInWithEmailAndPassword } from "firebase/auth";</script>   -->
+           
+    
+        <script src="script.js"></script>
+
+       
+    </head>
+    
+    
+    <header>
+        <h1>The Art Gallery</h1>
+    </header>
+    
+    <body>
+        
+      
+        
+        
+
+          
+            <div class="cont" >
+                <div class="form sign-in">
+                    <h2>Welcome</h2>
+                  
+                    <fieldset id="field_mail" style="margin: auto;margin-top: 2cm;width: 70%;">
+                        <legend>Email</legend>
+                        <input type="email"  id="email_input"/>
+                    </fieldset>
+                    <fieldset id="field_pass" style="margin: auto;margin-top: 1cm;width: 70%;">
+                        <legend>Password</legend>
+                        <input type="password" id="pass_input" />
+                    </fieldset>
+                  
+                    
+                    <p class="forgot-pass">Forgot password?</p>
+                    <button type="button" onclick="login()" class="submit">Sign In</button>
+                    <div id="myProgress">
+                        <div id="myBar"></div>
+                      </div>
+                 
+                </div>
+                <div class="sub-cont">
+                    <div class="img">
+                        <div class="img__text m--up">
+                         
+                            <h3>Don't have an account? Please Sign up!<h3>
+                        </div>
+                        <div class="img__text m--in">
+                        
+                            <h3>If you already has an account, just sign in.<h3>
+                        </div>
+                        <div class="img__btn">
+                            <span class="m--up">Sign Up</span>
+                            <span class="m--in">Sign In</span>
+                        </div>
+                    </div>
+                    <div class="form sign-up">
+                        <h2>Create your Account</h2>
+                        <fieldset style="margin-top:0.4cm ;">
+                            <legend>Name</legend>
+                            <input type="text"  id="reg_name"/>
+                        </fieldset>
+                        <fieldset style="margin-top:0.4cm ;">
+                            <legend>Email</legend>
+                            <input type="email" id="reg_mail" />
+                        </fieldset>
+                       
+                        <fieldset style="margin-top:0.4cm ;">
+                            <legend>
+                                Phone No
+                            </legend>
+                            <input type="number" id="reg_phone" />
+                           </fieldset>
+                        <fieldset style="margin-top:0.4cm ;">
+                        <legend>
+                            Password
+                        </legend>
+                        <input type="password" id="reg_pass" />
+                       </fieldset>
+                       
+                      
+
+                       
+                        <button type="button" onclick="register()" class="submit" style="margin-top: 0.5cm;">Sign Up</button>
+                        <div id="myProgress2">
+                            <div id="myBar2"></div>
+                          </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <script>
+               document.querySelector('.img__btn').addEventListener('click', function() {
+                document.querySelector('.cont').classList.toggle('s--signup');
+});
+
+            </script>
+    </body>
+</html>
